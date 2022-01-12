@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.todo {
+  background: rgb(13, 13, 14);
+background: linear-gradient(163deg, rgb(19, 19, 24) 1%, rgb(3, 3, 17) 41%, rgba(11,2,50,1) 100%);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-todo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-todo {
+    width: 100%;
+    text-align: start;
+    font-size: 20px;
+    padding: 8px 20px;
+    margin: 8px ;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.btn-addtodo{
+    width: 20%;
+    padding: 8px ;
+    margin: 3px;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    background-color: #ccc;
+    text-align: center;
+}
+
+.display-div{
+  display: flex;
+  flex-direction: row;
+  border: 5px;
+  color: azure;
+  font-size: 20px;
+  padding: 10px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.trash-btn{
+  color: rgb(17, 21, 24);
+  background-color: azure;
+  padding: 10px 20px;
+  margin: 4px;
+  border: none;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.todo-title{
+  color: #dddddd;
+text-shadow: 2px -2px 6px #72737e,
+-2px 2px 6px #083994;
+}
+
+.div-dele{
+  display: flex;
+  flex-direction: row;
+}

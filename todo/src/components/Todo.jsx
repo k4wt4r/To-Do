@@ -16,27 +16,33 @@ export default function Todo() {
 		setItems(items.filter((item) => item !== dele))
 	}
 
-	return ( 
+	return (
 	<div className="todo" >
+		<div className="todo-title">
+					<h1>To Do</h1>
+				</div>
 			<form  className="form-todo"onSubmit={AddHandler}>
 				<input
-					type="input"
+					type="text"
 					className="input-todo"
 					onChange={(e) => setInput(e.target.value)}
 					value={input}
 					placeholder="add ToDo"
 				/>
-				<button className="btn-addtodo" type="submit">➕
-				</button>
+				<button className="btn-addtodo" type="submit">Add</button>
 
 			</form>
-			<div className="display-div">   
+			<div className="display-div">
 {/* adding map method for displaying and deleting items */}
+
 				{items.map((dele, i) => {
 					return (
-						<div className="" key={i}>{dele}
-							<button onClick={() => deleteItem(dele)}>🗑️</button>
+						<>
+						<input type="checkbox" />
+						<div className="dele-div" key={i}>{dele}
+							<button className="trash-btn" onClick={() => deleteItem(dele)}>delete</button>
 						</div>
+						</>
 					)
 				})}
 			</div>
