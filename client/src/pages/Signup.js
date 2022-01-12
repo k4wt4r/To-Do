@@ -3,6 +3,7 @@ import React from 'react'
 export default function Signup() {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
+
 	const onChange = (e) => {
 		setEmail(e.target.value);
 		setName(e.target.value);

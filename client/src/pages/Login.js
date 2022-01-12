@@ -1,9 +1,11 @@
 import React from 'react'
 
 export default function Login() {
-	const [email, setEmail] = useState("")
+	const [email, setEmail] = React.useState("")
+	const [password, setPassword] =React.useState("")
 	const onChange = (e) => {
-		setEmail(e.target.value)
+		setEmail(e.target.value);
+		setPassword(e.target.value)
 	}
 	const onSubmit = (event) =>{
 		event.preventDefault();
@@ -12,9 +14,10 @@ export default function Login() {
 		}
 	}
 	return (
-		<form className="login-form">
+		<form className="login">
 			<input
 			className="input-email-login"
+			name="email"
 			type="email"
 			placeholder="Enter your email"
 			value={email}
@@ -23,7 +26,10 @@ export default function Login() {
 			<input
 			className="input-password-login"
 			type="password"
+			name="password"
 			placeholder="Enter your password"
+			onChange={onChange}
+			value={password}
 			/>
 			<button
 			type="submit"
