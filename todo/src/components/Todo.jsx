@@ -38,9 +38,8 @@ export default function Todo() {
 				{items.map((dele, i) => {
 					return (
 						<>
-						<input type="checkbox" />
 						<div className="dele-div" key={i}>{dele}
-							<button className="trash-btn" onClick={() => deleteItem(dele)}>delete</button>
+							<button className="trash-btn" onClick={() => deleteItem(dele)}>Delete</button>
 						</div>
 						</>
 					)
