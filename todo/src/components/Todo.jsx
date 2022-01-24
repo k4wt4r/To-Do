@@ -34,14 +34,12 @@ export default function Todo() {
 			</form>
 			<div className="display-div">
 {/* adding map method for displaying and deleting items */}
-
 				{items.map((dele, i) => {
 					return (
-						<>
-						<div className="dele-div" key={i}>{dele}
+						<div  className="dele-div">
+						<div className="text-todo" key={i}>{dele}</div>
 							<button className="trash-btn" onClick={() => deleteItem(dele)}>Delete</button>
 						</div>
-						</>
 					)
 				})}
 			</div>
