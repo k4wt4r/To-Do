@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react';
 
 export default function Signup() {
 	const [name, setName] = useState("");
@@ -10,7 +11,7 @@ export default function Signup() {
 	}
 	const onSubmit = (event) =>{
 		event.preventDefault();
-		if (email === "" || password.lenght < 8) {
+		if (email === "") {
 			return;
 		}
 		setName("");

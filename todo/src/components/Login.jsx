@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export default function Login() {
 	const [email, setEmail] = React.useState("")
@@ -14,7 +15,8 @@ export default function Login() {
 		}
 	}
 	return (
-		<form className="login">
+		<div className="login">
+		<form className="login-form">
 			<input
 			className="input-email-login"
 			name="email"
@@ -32,11 +34,17 @@ export default function Login() {
 			value={password}
 			/>
 			<button
+			className=""
 			type="submit"
 			onClick={onSubmit}
 			>
-				Log in
+				<Link to="/todolist">log in</Link>
+
 			</button>
+			<div>
+				<p>Don't have an account? <Link to="/signup"> Sign Up</Link></p>
+			</div>
 		</form>
+		</div>
 	)
 }

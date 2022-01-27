@@ -17,7 +17,8 @@ export default function Todo() {
 	}
 
 	return (
-	<div className="todo" >
+				<div className="todo-app">
+		<div className="todo" >
 		<div className="todo-title">
 					<h1>To Do</h1>
 				</div>
@@ -34,15 +35,16 @@ export default function Todo() {
 			</form>
 			<div className="display-div">
 {/* adding map method for displaying and deleting items */}
-				{items.map((dele, i) => {
+				{items.map((element, index) => {
 					return (
 						<div  className="dele-div">
-						<div className="text-todo" key={i}>{dele}</div>
-							<button className="trash-btn" onClick={() => deleteItem(dele)}>Delete</button>
+						<div className="text-todo" key={index}>{element}</div>
+							<button className="trash-btn" onClick={() => deleteItem(element)}>Delete</button>
 						</div>
 					)
 				})}
 			</div>
+		</div>
 		</div>
 
 	)
