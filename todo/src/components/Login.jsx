@@ -15,36 +15,40 @@ export default function Login() {
 		}
 	}
 	return (
-		<div className="login">
-		<form className="login-form">
-			<input
-			className="input-email-login"
-			name="email"
-			type="email"
-			placeholder="Enter your email"
-			value={email}
-			onChange={onChange}
-			/>
-			<input
-			className="input-password-login"
-			type="password"
-			name="password"
-			placeholder="Enter your password"
-			onChange={onChange}
-			value={password}
-			/>
-			<button
-			className=""
-			type="submit"
-			onClick={onSubmit}
-			>
-				<Link to="/todolist">log in</Link>
+    <div className="login-container">
+      <div className="login">
+        <form className="login-form">
+          <h1 className="login-title">Log in</h1>
+          <input
+            className="input-email-login"
+            name="email"
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={onChange}
+          />
+          <input
+            className="input-password-login"
+            type="password"
+            name="password"
+            placeholder="Enter your password"
+            onChange={onChange}
+            value={password}
+          />
+          <Link className="forgot-text" to="/forgotpassword">
+            Forgot password?
+          </Link>
 
-			</button>
-			<div>
-				<p>Don't have an account? <Link to="/signup"> Sign Up</Link></p>
-			</div>
-		</form>
-		</div>
-	)
+          <button className="btn-login" type="submit" onClick={onSubmit}>
+            Log in
+          </button>
+          <div className="signup-link">
+            <p>
+              Don't have an account? <Link to="/signup"> Sign Up</Link>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
 }
